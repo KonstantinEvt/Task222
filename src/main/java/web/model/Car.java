@@ -4,7 +4,6 @@ import org.springframework.stereotype.Component;
 
 import java.util.Objects;
 
-@Component
 public class Car {
 
     private String model;

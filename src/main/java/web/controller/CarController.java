@@ -19,9 +19,6 @@ public class CarController {
 
     @GetMapping()
     public String printCarsCount(@RequestParam(value = "count", defaultValue = "5", required = false) Long count, ModelMap model) {
-        if (count >= 6) {
-            count = 5L;
-        }
         model.addAttribute("carsList", carService.getCars(count));
         return "cars";
     }
